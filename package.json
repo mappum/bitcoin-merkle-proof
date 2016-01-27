@@ -4,7 +4,7 @@
   "description": "Bitcoin Merkle Trees",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && covert test.js"
   },
   "keywords": [
     "bitcoin",
@@ -14,6 +14,16 @@
   "author": "Matt Bell <mappum@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bitcore-lib": "^0.13.11"
+    "bitcoin-util": "^2.0.0",
+    "bitcore-lib": "^0.13.11",
+    "browserify-buffertools": "^1.0.2"
+  },
+  "devDependencies": {
+    "covert": "^1.1.0",
+    "standard": "^5.4.1",
+    "tape": "^4.4.0"
+  },
+  "optionalDependencies": {
+    "buffertools": "^2.1.3"
   }
 }
