@@ -1,7 +1,7 @@
 {
   "name": "bitcoin-merkle-tree",
   "version": "0.0.0",
-  "description": "Bitcoin Merkle Trees",
+  "description": "Verify Bitcoin Merkle trees (BIP37)",
   "main": "index.js",
   "scripts": {
     "test": "standard && tap --cov test.js"
