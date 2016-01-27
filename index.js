@@ -1,13 +1,5 @@
 var bitcore = require('bitcore-lib')
 var hash = bitcore.crypto.Hash.sha256sha256
-var u = require('bitcoin-util')
-
-var reverse
-try {
-  reverse = require('buffertools').reverse
-} catch (e) {
-  reverse = require('browserify-buffertools').reverse
-}
 
 module.exports = function fromMerkleBlock (block) {
   var tree = new MerkleTree()
@@ -43,7 +35,7 @@ module.exports = function fromMerkleBlock (block) {
   if (h < hashes.length) throw new Error('Tree did not consume all hashes')
   if (root.compare(block.header.merkleRoot) !== 0) {
     throw new Error('Calculated Merkle root does not match header, calculated: ' +
-      reverse(root).toString('hex') + ', header: ' + block.header.merkleRoot.toString('hex'))
+      root.toString('hex') + ', header: ' + block.header.merkleRoot.toString('hex'))
   }
 
   return tree
@@ -71,7 +63,8 @@ Node.prototype.hash = function () {
   var leftHash = this.left.hash()
   var rightHash = (this.right || this.left).hash()
   if (this.right && leftHash.compare(rightHash) === 0) {
-    throw new Error('Merkle child hashes are equivalent (%s)', u.toHash(leftHash).toString('hex'))
+    throw new Error('Merkle child hashes are equivalent (' +
+      leftHash.toString('hex') + ')')
   }
   return hash(Buffer.concat([ leftHash, rightHash ]))
 }
