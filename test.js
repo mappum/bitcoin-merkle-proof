@@ -23,6 +23,9 @@ test('build from MerkleBlock', function (t) {
     t.ok(tree._root.right.left.left)
     t.ok(tree._root.right.left.right)
     t.equal(tree.root().toString('hex'), '7f16c5962e8bd963659c793ce370d95f093bc7e367117b3c30c1f8fdd0d97287')
+    t.ok(tree.txids)
+    t.equal(tree.txids.length, 1)
+    t.equal(tree.txids[0].toString('hex'), '019f5b01d4195ecbc9398fbf3c3b1fa9bb3183301d7a1fb3bd174fcfa40a2b65')
     t.end()
   })
 
@@ -47,6 +50,9 @@ test('build from MerkleBlock', function (t) {
     })
     t.ok(tree._root)
     t.equal(tree.root().toString('hex'), 'fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc')
+    t.ok(tree.txids)
+    t.equal(tree.txids.length, 1)
+    t.equal(tree.txids[0].toString('hex'), '52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f')
     t.end()
   })
 
@@ -90,6 +96,12 @@ test('build from MerkleBlock', function (t) {
     })
     t.ok(tree._root)
     t.equal(tree.root().toString('hex'), 'ca52ca1771f88ed3929ba5a662537af319db203dbb8b38f79d712d68b9c708c2')
+    t.ok(tree.txids)
+    t.equal(tree.txids.length, 4)
+    t.equal(tree.txids[0].toString('hex'), 'cd6521bb842834048b0ed70b20aa0f1453122ad1a6071f27fa53e618d2171648')
+    t.equal(tree.txids[1].toString('hex'), '358728dc4d81aac33230d586aee9ee60d82f52db6f4373e62b30b6ee0f0c166b')
+    t.equal(tree.txids[2].toString('hex'), '22d37f04728fb5c74a46612053af64fe6bea74648b01868f19ea2ac0f56309a1')
+    t.equal(tree.txids[3].toString('hex'), '80ab6ad2938a2bc9bcdd7d1ad9cda511d44650aeccf73ad3386e3a6604942209')
     t.end()
   })
 
