@@ -14,15 +14,10 @@
   "author": "Matt Bell <mappum@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bitcoin-util": "^2.0.0",
-    "bitcore-lib": "^0.13.11",
-    "browserify-buffertools": "^1.0.2"
+    "bitcore-lib": "^0.13.11"
   },
   "devDependencies": {
     "standard": "^5.4.1",
     "tap": "^5.2.0"
-  },
-  "optionalDependencies": {
-    "buffertools": "^2.1.3"
   }
 }

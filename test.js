@@ -22,6 +22,7 @@ test('build from MerkleBlock', function (t) {
     t.ok(tree._root.right)
     t.ok(tree._root.right.left.left)
     t.ok(tree._root.right.left.right)
+    t.equal(tree.root().toString('hex'), '7f16c5962e8bd963659c793ce370d95f093bc7e367117b3c30c1f8fdd0d97287')
     t.end()
   })
 
@@ -45,6 +46,7 @@ test('build from MerkleBlock', function (t) {
       }
     })
     t.ok(tree._root)
+    t.equal(tree.root().toString('hex'), 'fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc')
     t.end()
   })
 
@@ -87,6 +89,7 @@ test('build from MerkleBlock', function (t) {
       }
     })
     t.ok(tree._root)
+    t.equal(tree.root().toString('hex'), 'ca52ca1771f88ed3929ba5a662537af319db203dbb8b38f79d712d68b9c708c2')
     t.end()
   })
 
@@ -146,7 +149,34 @@ test('invalid merkleblocks', function (t) {
       })
     } catch (e) {
       t.ok(e, 'error thrown')
-      t.equal(e.message, 'Calculated Merkle root does not match header, calculated: cc8971be882d6e68d5e7eb817a063ec523377c953ff21ed4f25e0578a02c2efb, header: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff')
+      t.equal(e.message, 'Calculated Merkle root does not match header, calculated: fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc, header: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff')
+    }
+    t.end()
+  })
+
+  t.test('duplicate leaf hashes', function (t) {
+    try {
+      merkleTree({
+        flags: [ 109, 117, 0 ],
+        hashes: [
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4'
+        ],
+        numTransactions: 362,
+        header: {
+          merkleRoot: new Buffer('ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff', 'hex')
+        }
+      })
+    } catch (e) {
+      t.ok(e, 'error thrown')
+      t.equal(e.message, 'Merkle child hashes are equivalent (97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4)')
     }
     t.end()
   })
