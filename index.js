@@ -2,6 +2,13 @@ var bitcore = require('bitcore-lib')
 var hash = bitcore.crypto.Hash.sha256sha256
 var u = require('bitcoin-util')
 
+var reverse
+try {
+  reverse = require('buffertools').reverse
+} catch (e) {
+  reverse = require('browserify-buffertools').reverse
+}
+
 module.exports = function fromMerkleBlock (block) {
   var tree = new MerkleTree()
   var hashes = block.hashes
@@ -36,7 +43,7 @@ module.exports = function fromMerkleBlock (block) {
   if (h < hashes.length) throw new Error('Tree did not consume all hashes')
   if (root.compare(block.header.merkleRoot) !== 0) {
     throw new Error('Calculated Merkle root does not match header, calculated: ' +
-      root.toString('hex') + ', header: ' + block.header.merkleRoot.toString('hex'))
+      reverse(root).toString('hex') + ', header: ' + block.header.merkleRoot.toString('hex'))
   }
 
   return tree
