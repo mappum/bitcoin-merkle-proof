@@ -193,5 +193,59 @@ test('invalid merkleblocks', function (t) {
     t.end()
   })
 
+  t.test('unused flag byte', function (t) {
+    try {
+      merkleTree({
+        flags: [ 109, 117, 0, 0 ],
+        hashes: [
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '6c243e0cfb25519bfdbc9a46184ac637557fd16a469e0b1d6489df82bd43f98d',
+          'e51ac3a2e43d1b3360913db73e8e7559a37c0a26cd47a4e0c2a7ee7a6af6394d',
+          'b4232ddd34821c98fbe92d0a8994e8c3d6eda738ba6c01d3fe436e5afe17ec73',
+          'ff6a1f2453a773dead88d5352a8f9876c58d099cdcae55cb2aa562bb202c4024',
+          '52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f',
+          '9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4',
+          'ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377',
+          'eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e'
+        ],
+        numTransactions: 362,
+        header: {
+          merkleRoot: new Buffer('fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc', 'hex')
+        }
+      })
+    } catch (e) {
+      t.ok(e, 'error thrown')
+      t.equal(e.message, 'Tree did not consume all flag bits')
+    }
+    t.end()
+  })
+
+  t.test('unused flag bit', function (t) {
+    try {
+      merkleTree({
+        flags: [ 109, 117, 0x80 ],
+        hashes: [
+          '97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4',
+          '6c243e0cfb25519bfdbc9a46184ac637557fd16a469e0b1d6489df82bd43f98d',
+          'e51ac3a2e43d1b3360913db73e8e7559a37c0a26cd47a4e0c2a7ee7a6af6394d',
+          'b4232ddd34821c98fbe92d0a8994e8c3d6eda738ba6c01d3fe436e5afe17ec73',
+          'ff6a1f2453a773dead88d5352a8f9876c58d099cdcae55cb2aa562bb202c4024',
+          '52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f',
+          '9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4',
+          'ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377',
+          'eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e'
+        ],
+        numTransactions: 362,
+        header: {
+          merkleRoot: new Buffer('fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc', 'hex')
+        }
+      })
+    } catch (e) {
+      t.ok(e, 'error thrown')
+      t.equal(e.message, 'Tree did not consume all flag bits')
+    }
+    t.end()
+  })
+
   t.end()
 })
