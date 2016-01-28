@@ -31,6 +31,10 @@ module.exports = function fromMerkleBlock (block) {
   tree._root = getNode(0, 0)
   var root = tree._root.hash()
 
+  var flagByte = Math.floor(i / 8)
+  if (flagByte + 1 < flags.length || flags[flagByte] & (0xffff << i % 8)) {
+    throw new Error('Tree did not consume all flag bits')
+  }
   if (h < hashes.length) throw new Error('Tree did not consume all hashes')
   if (root.compare(block.header.merkleRoot) !== 0) {
     throw new Error('Calculated Merkle root does not match header, calculated: ' +
