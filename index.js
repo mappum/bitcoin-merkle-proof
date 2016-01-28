@@ -1,5 +1,4 @@
-var bitcore = require('bitcore-lib')
-var hash = bitcore.crypto.Hash.sha256sha256
+var createHash = require('create-hash')
 
 module.exports = function fromMerkleBlock (block) {
   var tree = new MerkleTree()
@@ -66,9 +65,17 @@ Node.prototype.hash = function () {
     throw new Error('Merkle child hashes are equivalent (' +
       leftHash.toString('hex') + ')')
   }
-  return hash(Buffer.concat([ leftHash, rightHash ]))
+  return sha256sha256(Buffer.concat([ leftHash, rightHash ]))
 }
 
 function getBit (buffer, n) {
   return !!(buffer[Math.floor(n / 8)] & (1 << (n % 8)))
+}
+
+function sha256 (buf) {
+  return createHash('sha256').update(buf).digest()
+}
+
+function sha256sha256 (buf) {
+  return sha256(sha256(buf))
 }

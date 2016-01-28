@@ -14,7 +14,7 @@
   "author": "Matt Bell <mappum@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bitcore-lib": "^0.13.11"
+    "create-hash": "^1.1.2"
   },
   "devDependencies": {
     "standard": "^5.4.1",
