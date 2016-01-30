@@ -1,0 +1,187 @@
+{
+  "valid": [
+    {
+      "name": "block #681271",
+      "txids": [
+        "f07972bbd941ef3bccb8403089f792d8e482766950122a2182620e11dcd693c5",
+        "3890af0214ad65cb4201acdee48c0dc85ce99f7a2f49cb68ffbc2b5c116b7845",
+        "35bbb87c4723d65990dfb755204036d698c447062287e357c392e660b4c47e98",
+        "87c0eff61ac360e76b7455bd5267b8181d60b632f51dae7e68fe60efaa1df926",
+        "3e4bb67ecc75f42a35ecd31e553c3a2fd7b290386291c1ef82fc302667f92069",
+        "8495cf9156cc7fe7a9b4c4406db128040dbd18d9da6873e8893572c03a462a54",
+        "830e470c27aae62e77440f05f4e73474d5b1a1f01a1cd2839d5649196a7a950d"
+      ],
+      "include": [
+        "3e4bb67ecc75f42a35ecd31e553c3a2fd7b290386291c1ef82fc302667f92069"
+      ],
+      "merkleRoot": "c0816c05d821c38f3bf72499407eeb52f64fb8f65ae07d91c8ffb73659649268"
+    },
+    {
+      "name": "block #681372",
+      "txids": [
+        "672c82c081569fe0104b1abbee4bfbdcf461e45fbb57db4de51c169d2776756e",
+        "149e28b2d66a7feb8768518b1bf31c7d3d9fb90ccb646f396e67bef290364634",
+        "ae151d493d96c45167fe33e6fb04ad743b8b0239e9ba72691b46ab5bfb1c867d",
+        "43bc1b562f5ce8271491841a90dcfc377479bc2b1954162670329435442e3a1d",
+        "e67d83bf5f62aafc196b4c267574485bc984a83d93271b4ca0a18aa607c33ee8",
+        "3ea4d6a6ab3fdcc0a2b722c74376d274850007ed96a94c08a3ff2178161c6e2a",
+        "493dc20009050d44042dca430aef87e9f5b42c7b830ee4c67a68890014408eb7",
+        "b6a8744444b908c5d1de92d8c4f735220ea9206c1934b59b8840e739a2d635bd",
+        "7864e0b6b439d7fe162492ce869317e8b7911fa3a48ce98c55511af6852e6923",
+        "a19f107d5f52879022c6a10bc89e34cdcd56635cd21597f648b7a4843bd6509c",
+        "e98d0f2a252d482b10e218164406773d98e156399c0ae50e7d2ede99a70d6d1a",
+        "544bf7155bd9495cbe6ae5f8b1a374c11b324368ee2d612bc3360ea709f7aaad",
+        "a724fb497abfc6cb6dee1b2bd4c5a955dcace79121335ac189b1483a0312320f",
+        "0d916910a2885744259e1083644a32521201a5234f897f082efa7bc45da78cfb",
+        "d931dca43adeb4b70699c1c9283ae56115daeb0e2463024fc4c30b6cb6ad1877",
+        "daa1c6e197bd1e615336534bae4ac676b6d219ef2cb0cab9684df45ddee8c11a",
+        "0e7cdfaf48bc59012b732dacce4d44d378bee98a2ea96d30d7764db0e2dbbcc1",
+        "9705ac3b91c65ea0685381c9e3b520c65de7b8ff1b61591d971a2a04efcf8a08",
+        "d2c13cc801a2ecb004f08ef57e4de02ea8286aaf8e1289aaa17cb8d9b74ffe52",
+        "bcbd05f5569bfe43510c24895b89ee03ea3b2d78633158817dd207af7f1b21b6",
+        "dbbd884aca8f8aa174213db34a0e9d1c7a815f316f5c78ee4b5745bb40bb4f02",
+        "36c786ffe9e4dfbd80a5bc7a086e82e15a4ae8f7bfee3966c234884f1d84e726",
+        "a27cc4c8fb262ab48d2913725b18461bb4b6f256f3bc81b90124059289456e66",
+        "ea037462f10af9e2d9ca0c93821fbe3e04678fa094fa7c66a93fcbda1fa8ee09",
+        "1bc87c0b150a8ff8118ff8a32bb527de7f721f81957ec16207d51272361f6ac5",
+        "bd9b1206922c3b6388bf7526765ac5c28bc44114c017af25338cd917c58c3358",
+        "d9b30c10229eb0ea386d16c68d018a36d21bf13720d3c273ca0d4f47f21e9868",
+        "b8d1b9d75c10e805401d4910d941eb13bed56d7dfe09804e6551ad9ded9861d3",
+        "b4c40bf906a47a82ce98444345d0ff4e2c4cb921c1a43e6b5f28e42c02cf562c",
+        "4eed2e650e32baddb726d255a306d73c77389cdf1f0bcb01ed108dd3d1850d4c",
+        "3aecc861718da68e736a56ee92e61e9379356779794404cbecd106701eac7050",
+        "5d68b94dcc0b928b20a4f49672824cfe374767f72b352f5ad0c92387ccf1d4dd",
+        "91ef9ec5e38227bf8e979bf6d2522b9c674bc8743f4a2459b2eeb45dcbdb3c84",
+        "b96c5354a1dfaead0c6ffe7db22fc96806f269ff04bacd2f757884006a32bbff",
+        "2b0304338e01f684629e005203052b865325cdcc105aa36bdf635b826308b698"
+      ],
+      "include": [
+        "149e28b2d66a7feb8768518b1bf31c7d3d9fb90ccb646f396e67bef290364634",
+        "9705ac3b91c65ea0685381c9e3b520c65de7b8ff1b61591d971a2a04efcf8a08",
+        "bd9b1206922c3b6388bf7526765ac5c28bc44114c017af25338cd917c58c3358",
+        "91ef9ec5e38227bf8e979bf6d2522b9c674bc8743f4a2459b2eeb45dcbdb3c84"
+      ],
+      "merkleRoot": "105f3f2cb20768b9266ad39f6f30ab71fc702569561df59176c6cf9104118542"
+    },
+    {
+      "name": "block #681246",
+      "txids": [
+        "79419c12d762545065abbd5e196141b4c5338a3e36dd6c389c1ead912a71faa4"
+      ],
+      "include": [
+        "79419c12d762545065abbd5e196141b4c5338a3e36dd6c389c1ead912a71faa4"
+      ],
+      "merkleRoot": "79419c12d762545065abbd5e196141b4c5338a3e36dd6c389c1ead912a71faa4"
+    },
+    {
+      "name": "block #681135",
+      "txids": [
+        "e9c0893ab7d70def96606ddf17a4ee2866da9aad4e6038aa245e0d12ef93a852",
+        "073283766db33766c0b44b7aa54affb89e549892377e89bd54b2bbff1b1e6aa7",
+        "6f4679b71f43dd5e97d989f87f351cbc7c40cc23ada8448778777669644e6b05",
+        "0eb8b2002a57cb3d12d438b2c1a17988bcbdb3b17cc4a5e3b8d2cdf9b4bf513c",
+        "5c371ea772091192957e0880218f21f40c05cbcc2ea879030517400acaf9d1d6"
+      ],
+      "include": [
+        "5c371ea772091192957e0880218f21f40c05cbcc2ea879030517400acaf9d1d6"
+      ],
+      "merkleRoot": "582ee58304ee37ea1030d7b7be5296bf5f4787b529a932dc8784c1940250b4b9"
+    }
+  ],
+  "invalid": [
+    {
+      "name": "not all hashes used",
+      "flags": [ 109, 117, 0 ],
+      "hashes": [
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "6c243e0cfb25519bfdbc9a46184ac637557fd16a469e0b1d6489df82bd43f98d",
+        "e51ac3a2e43d1b3360913db73e8e7559a37c0a26cd47a4e0c2a7ee7a6af6394d",
+        "b4232ddd34821c98fbe92d0a8994e8c3d6eda738ba6c01d3fe436e5afe17ec73",
+        "ff6a1f2453a773dead88d5352a8f9876c58d099cdcae55cb2aa562bb202c4024",
+        "52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f",
+        "9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4",
+        "ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377",
+        "eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e",
+        "9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4",
+        "ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377",
+        "eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e"
+      ],
+      "numTransactions": 362,
+      "merkleRoot": "fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc",
+      "message": "Tree did not consume all hashes"
+    },
+    {
+      "name": "unused flag byte",
+      "flags": [ 109, 117, 0, 0 ],
+      "hashes": [
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "6c243e0cfb25519bfdbc9a46184ac637557fd16a469e0b1d6489df82bd43f98d",
+        "e51ac3a2e43d1b3360913db73e8e7559a37c0a26cd47a4e0c2a7ee7a6af6394d",
+        "b4232ddd34821c98fbe92d0a8994e8c3d6eda738ba6c01d3fe436e5afe17ec73",
+        "ff6a1f2453a773dead88d5352a8f9876c58d099cdcae55cb2aa562bb202c4024",
+        "52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f",
+        "9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4",
+        "ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377",
+        "eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e"
+      ],
+      "numTransactions": 362,
+      "merkleRoot": "fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc",
+      "message": "Tree did not consume all flag bits"
+    },
+    {
+      "name": "unused flag bit",
+      "flags": [ 109, 117, 128 ],
+      "hashes": [
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "6c243e0cfb25519bfdbc9a46184ac637557fd16a469e0b1d6489df82bd43f98d",
+        "e51ac3a2e43d1b3360913db73e8e7559a37c0a26cd47a4e0c2a7ee7a6af6394d",
+        "b4232ddd34821c98fbe92d0a8994e8c3d6eda738ba6c01d3fe436e5afe17ec73",
+        "ff6a1f2453a773dead88d5352a8f9876c58d099cdcae55cb2aa562bb202c4024",
+        "52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f",
+        "9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4",
+        "ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377",
+        "eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e"
+      ],
+      "numTransactions": 362,
+      "merkleRoot": "fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc",
+      "message": "Tree did not consume all flag bits"
+    },
+    {
+      "name": "duplicate leaf hashes",
+      "flags": [ 109, 117, 0 ],
+      "hashes": [
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4"
+      ],
+      "numTransactions": 362,
+      "merkleRoot": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "message": "Merkle child hashes are equivalent \\(97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4\\)"
+    },
+    {
+      "name": "invalid merkle root in header",
+      "flags": [ 109, 117, 0 ],
+      "hashes": [
+        "97929f984c3188642c9732ea6df79f669c00fc213eecbfe568167a4a633cefb4",
+        "6c243e0cfb25519bfdbc9a46184ac637557fd16a469e0b1d6489df82bd43f98d",
+        "e51ac3a2e43d1b3360913db73e8e7559a37c0a26cd47a4e0c2a7ee7a6af6394d",
+        "b4232ddd34821c98fbe92d0a8994e8c3d6eda738ba6c01d3fe436e5afe17ec73",
+        "ff6a1f2453a773dead88d5352a8f9876c58d099cdcae55cb2aa562bb202c4024",
+        "52a88d05f0f4c46681bae3be39c35391db370d41a2197f72f616b2ee47698f6f",
+        "9d5493b33f4042bccc0f0745315c69f7f39317964288a7fd56c4a4bf3b12bed4",
+        "ed8ba481ad870d0c25fd8fd07a9346212434749eb5f031e70332347c8232e377",
+        "eba009b7beb9b2215ef4e73627513251fc373a41838e58ff12fa45a46fb7025e"
+      ],
+      "numTransactions": 362,
+      "merkleRoot": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "message": "Calculated Merkle root does not match header, calculated: fb2e2ca078055ef2d41ef23f957c3723c53e067a81ebe7d5686e2d88be7189cc, header: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    }
+
+  ]
+}
