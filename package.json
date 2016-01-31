@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-merkle-tree",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Verify Bitcoin Merkle trees (BIP37)",
   "keywords": [
     "bitcoin",
