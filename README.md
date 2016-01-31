@@ -1,8 +1,8 @@
-# bitcoin-merkle-tree
+# bitcoin-merkle-proof
 
-[![npm version](https://img.shields.io/npm/v/bitcoin-merkle-tree.svg)](https://www.npmjs.com/package/bitcoin-merkle-tree)
-[![Build Status](https://travis-ci.org/mappum/bitcoin-merkle-tree.svg?branch=master)](https://travis-ci.org/mappum/bitcoin-merkle-tree)
-[![Dependency Status](https://david-dm.org/mappum/bitcoin-merkle-tree.svg)](https://david-dm.org/mappum/bitcoin-merkle-tree)
+[![npm version](https://img.shields.io/npm/v/bitcoin-merkle-proof.svg)](https://www.npmjs.com/package/bitcoin-merkle-proof)
+[![Build Status](https://travis-ci.org/mappum/bitcoin-merkle-proof.svg?branch=master)](https://travis-ci.org/mappum/bitcoin-merkle-proof)
+[![Dependency Status](https://david-dm.org/mappum/bitcoin-merkle-proof.svg)](https://david-dm.org/mappum/bitcoin-merkle-proof)
 
 **Verify Bitcoin Merkle trees**
 
@@ -12,10 +12,10 @@ This module verifies the Merkle proofs in a `merkleblock` message, and lists the
 
 ## Usage
 
-`npm install bitcoin-merkle-tree`
+`npm install bitcoin-merkle-proof`
 
 ```js
-var merkleTree = require('bitcoin-merkle-tree')
+var merkleTree = require('bitcoin-merkle-proof')
 
 // build partial merkle tree object (block #681135 in testnet)
 var partialMT = merkleTree.build({
