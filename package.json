@@ -2,22 +2,28 @@
   "name": "bitcoin-merkle-tree",
   "version": "0.0.2",
   "description": "Verify Bitcoin Merkle trees (BIP37)",
-  "main": "index.js",
-  "scripts": {
-    "test": "standard && tap --cov test.js"
-  },
   "keywords": [
     "bitcoin",
     "merkle",
-    "tree"
+    "tree",
+    "bip37"
   ],
   "author": "Matt Bell <mappum@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "create-hash": "^1.1.2"
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "main": "./index.js",
+  "scripts": {
+    "test": "standard && tap --cov test/index.js"
   },
+  "license": "MIT",
   "devDependencies": {
     "standard": "^5.4.1",
     "tap": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=4"
   }
 }

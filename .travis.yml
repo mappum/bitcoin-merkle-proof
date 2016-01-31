@@ -1,9 +1,13 @@
+sudo: false
+
+os:
+  - linux
+
 language: node_js
 
 node_js:
-  - 5
-  - 4
-  - 0.12
+  - "4"
+  - "5"
 
 cache:
   directories:
@@ -11,3 +15,5 @@ cache:
 
 notifications:
   email: false
+
+script: npm run test
