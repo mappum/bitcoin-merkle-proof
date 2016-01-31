@@ -1,11 +1,12 @@
 {
-  "name": "bitcoin-merkle-tree",
-  "version": "1.0.0",
-  "description": "Verify Bitcoin Merkle trees (BIP37)",
+  "name": "bitcoin-merkle-proof",
+  "version": "0.0.0",
+  "description": "Build and verify Bitcoin Merkle proofs",
   "keywords": [
     "bitcoin",
     "merkle",
     "tree",
+    "proof",
     "bip37"
   ],
   "author": "Matt Bell <mappum@gmail.com>",
