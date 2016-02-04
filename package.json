@@ -20,6 +20,9 @@
     "test": "standard && tap --cov test/index.js"
   },
   "license": "MIT",
+  "dependencies": {
+    "create-hash": "^1.1.2"
+  },
   "devDependencies": {
     "standard": "^5.4.1",
     "tap": "^5.2.0"

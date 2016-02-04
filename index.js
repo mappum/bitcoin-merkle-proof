@@ -1,4 +1,4 @@
-var createHash = require('crypto').createHash
+var createHash = require('create-hash')
 
 /**
  * @param {Buffer} buf1
