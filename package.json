@@ -29,5 +29,16 @@
   },
   "engines": {
     "node": ">=4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mappum/bitcoin-merkle-proof.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mappum/bitcoin-merkle-proof/issues"
+  },
+  "homepage": "https://github.com/mappum/bitcoin-merkle-proof#readme"
 }
