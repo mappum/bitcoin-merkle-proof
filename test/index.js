@@ -24,6 +24,24 @@ test('valid', function (t) {
   t.end()
 })
 
+test('valid verify()', function (t) {
+  fixtures.validVerify.forEach(function (data) {
+    t.test(data.name, function (t) {
+      data.hashes = util.strings2buffers(data.hashes)
+      data.merkleRoot = util.string2buffer(data.merkleRoot)
+
+      var hashes = merkleTree.verify(data)
+
+      console.log(hashes.map((hash) => hash.toString('hex')))
+
+      t.deepEqual(data.include, util.buffers2string(hashes))
+      t.end()
+    })
+  })
+
+  t.end()
+})
+
 test('invalid', function (t) {
   fixtures.invalid.forEach(function (fixture) {
     t.test(fixture.name, function (t) {
