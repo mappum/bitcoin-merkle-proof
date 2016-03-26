@@ -163,8 +163,8 @@ module.exports.verify = function (data) {
   var merkleRoot = extract(Math.ceil(Math.log2(data.numTransactions)), 0)
 
   var flagByte = Math.floor(bitsUsed / 8)
-  if (flagByte + 1 !== data.flags.length ||
-      data.flags[flagByte] >= 1 << (bitsUsed % 8 + 1)) {
+  if (flagByte + 1 < data.flags.length ||
+      data.flags[flagByte] > (1 << bitsUsed % 8)) {
     throw new Error('Tree did not consume all flag bits')
   }
 
