@@ -1,19 +1,19 @@
 sudo: false
-
-os:
-  - linux
-
 language: node_js
-
-node_js:
-  - "4"
-  - "5"
-
-cache:
-  directories:
-  - node_modules
-
+install: true
+script: ./test/travis.sh
+env:
+  matrix:
+  - NODE=6
+  - NODE=5
+  - NODE=4
+  - BROWSER=chrome
+  - BROWSER=firefox
+  - BROWSER=safari
+  - BROWSER=android
+  - BROWSER=iphone
+  global:
+  - secure: CGlhIPC6HszUTCXrK2CemTgy+3+ZyF9cx2zFk+OORRoxc9bVVDP9uI4qK/NKfo4DpYejEn8s8mIpegf42O1KprFwPd33hYCJEmTw6/8WWaKOE5XkBCQO7xHWbdBRbyozX5p9a+3H8dBp5V3fOYGOVTvj6NKOWCDGyOEKgxt6pv7dNUsH1jS1LS5Xzo9eoF0UbZzWCbbXhVFJrLBxucizD3i3FXsa2ZrtnY6azulqLHonS+Ja4zPzCqTC+IX2SAY/8TpOwY9j25AzFUY2OltlAVd39Xoj/NVrvDJEhjsHjUs6eEQkUtyWMxzrOEbyPjtCJOq2yVu0tccB3V9s1ki2hNbxm8c+TXKT8agB1OI8Gd1ZNCJF3yPVA4mRA/MCX4RQHVHCcZPKAjPJhYr0aCiqnb+dnMwgkHAxeTPRnF+24n1cmcqlK5E+x8z0CAhNRYzTcy94iTsR3hzF0PetK3xtbRKTD3E3cOVTiPlPhTWIkeGLDQDRx1DXIhNeKt650tMML1IJvj/yYO8rQhDoZH6e5M7jfoG1c3U99iO0lf71jciBxahw3rQlibl98IcaLXQY4cSj2SJORhNAE/edbdQpaIiMvbWiVo+FuWU7vpnZuS/UAYMJ9OwOTWmLR1SbsBW+D80D4gxh+m+5gBIVpLy5qNoJzEv8QbICQFLTQdWm5Ho=
+  - secure: Sypz+gpVYQEA58W7iBBF9x4TNncstN4MfsbdQO4/ozoxWwwQ4yDKHxj0YMfmJtixS52rrpufQJT1SDsBEj615w37G6VY2kScjk32EX8pLYhFKnz41AaVRTllcEDOfhFqkOkHMKTKKaI9u+sgbwmY/L2xAqT5DsACkCOGjJiYSYnzl7QrCnmAWgNk/GuIbSm+kwa0759qzpVwPMTa3Bntkzu3BrbhJSRxj5FimItrEyTzKyjJ2U9tWRkVK7OJQUIuROp9K4RCQGJstUzzw4mJsioeel4T2At2sPTX/bFYigQn1Iw7S6gzZDhEeBvusJwt6fuMz0Py1zLcj/MmkMummlgvLaOw+x+GmCPPg3osIGc6irgr9QY8kVS4ujJkEojlt+qdEdx5EbLowOGDoQZqhClAWNMYhaUS6Ew1iQ+v/GdyL8UOOka2KPHOjFg4FzDzE+m72F/zFGZRmC1y+Tui/yL8ccYfDSB2IebZnZPpaNYMGrSAreARWreIh+A5wLPjYYV6ESRp+amYXAppI+XvzxuBjL1+E9L8cMr3ocI+nMabuZKAcPBY/VTsktQ+DKFJk+MPsVNsPdgR2ZKsSMb74fyMIhDYQ+EwGSXLQT0wjLXTxCuAr2eGMnlYJuTMV7v0GbdGSdYJwdg6ZD3FW3YHj6sJY1Y0C2AVtgjo8R6Tp8s=
 notifications:
   email: false
-
-script: npm run test
