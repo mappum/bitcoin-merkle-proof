@@ -1,9 +1,11 @@
+var reverse = require('buffer-reverse')
+
 /**
  * @param {string} s
  * @return {Buffer}
  */
 module.exports.string2buffer = function (s) {
-  return new Buffer(s, 'hex').reverse()
+  return reverse(new Buffer(s, 'hex'))
 }
 
 /**
@@ -11,7 +13,7 @@ module.exports.string2buffer = function (s) {
  * @return {string}
  */
 module.exports.buffer2string = function (b) {
-  return new Buffer(b).reverse().toString('hex')
+  return reverse(new Buffer(b)).toString('hex')
 }
 
 /**

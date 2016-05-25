@@ -25,6 +25,7 @@
     "create-hash": "^1.1.2"
   },
   "devDependencies": {
+    "buffer-reverse": "^1.0.1",
     "faucet": "0.0.1",
     "nyc": "^6.4.4",
     "standard": "^7.0.0",
