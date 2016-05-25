@@ -32,8 +32,6 @@ test('valid verify()', function (t) {
 
       var hashes = merkleTree.verify(data)
 
-      console.log(hashes.map((hash) => hash.toString('hex')))
-
       t.deepEqual(data.include, util.buffers2string(hashes))
       t.end()
     })
