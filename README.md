@@ -8,17 +8,17 @@
 
 Bitcoin [BIP37](https://github.com/bitcoin/bips/blob/master/bip-0037.mediawiki) adds support for `merkleblock` messages, which allow clients to download blocks that only include transactions relevant to them. The transactions are selected via a Bloom Filter.
 
-This module verifies the Merkle proofs in a `merkleblock` message, and lists the included transactions which match the filter.
+This module creates and verifies the Merkle proofs in a `merkleblock` message, and lists the included transactions which match the filter.
 
 ## Usage
 
 `npm install bitcoin-merkle-proof`
 
 ```js
-var merkleTree = require('bitcoin-merkle-proof')
+var bmp = require('bitcoin-merkle-proof')
 
-// build partial merkle tree object (block #681135 in testnet)
-var partialMT = merkleTree.build({
+// build merkle proof object (block #681135 in testnet)
+var merkleProof = bmp.build({
   hashes: [
     new Buffer('52a893ef120d5e24aa38604ead9ada6628eea417df6d6096ef0dd7b73a89c0e9', 'hex'),
     new Buffer('a76a1e1bffbbb254bd897e379298549eb8ff4aa57a4bb4c06637b36d76833207', 'hex'),
@@ -29,8 +29,7 @@ var partialMT = merkleTree.build({
   include: [
     new Buffer('3c51bfb4f9cdd2b8e3a5c47cb1b3bdbc8879a1c1b238d4123dcb572a00b2b80e', 'hex'),
     new Buffer('d6d1f9ca0a4017050379a82ecccb050cf4218f2180087e9592110972a71e375c', 'hex')
-  ],
-  merkleRoot: new Buffer('b9b4500294c18487dc32a929b587475fbf9652beb7d73010ea37ee0483e52e58', 'hex')
+  ]
 })
 // { flags: [ 235, 1 ],
 //   hashes:
@@ -41,12 +40,12 @@ var partialMT = merkleTree.build({
 //   numTransactions: 5,
 //   merkleRoot: <Buffer b9 b4 50 02 94 c1 84 87 dc 32 a9 29 b5 87 47 5f bf 96 52 be b7 d7 30 10 ea 37 ee 04 83 e5 2e 58> }
 
-// extract included hashes from object
-var hashes = merkleTree.extract(partialMT)
-console.log('Matched transactions: ', hashes.map(function(b) { return b.toString('hex') }))
+// verify proof and return matched tx hashes
+var hashes = bmp.verify(merkleProof)
+console.log('Matched transactions: ', hashes)
 ```
 
-##### `var partialMerkleTree = merkleTree.build(block)`
+##### `var merkleProof = bmp.build(block)`
 
 Construct proof object for transactions. Proof object:
 ```js
@@ -58,6 +57,6 @@ Construct proof object for transactions. Proof object:
 }
 ```
 
-##### `var hashes = merkleTree.verify(partialMerkleTree)`
+##### `var hashes = bmp.verify(merkleProof)`
 
-Takes a block from a `merkleblock` message, and verifies the tree. An error will be thrown if the tree does not match the expected Merkle root. Returns an array of txids (as `Buffers`), that matched the Bloom filter.
+Verifies a Merkle proof object. An error will be thrown if the tree is not valid or does not match the expected Merkle root. Returns an array of txids (as `Buffer`s) which matched the Bloom filter.
