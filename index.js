@@ -53,7 +53,6 @@ function bytes2bits (bytes) {
  * @property {number[]} flags
  * @property {Buffer[]} hashes
  * @property {number} numTransactions
- * @property {Buffer} merkleRoot
  */
 
 /**
@@ -110,19 +109,20 @@ module.exports.build = function (data) {
     }
   }
 
-  build(Math.ceil(Math.log2(data.hashes.length)), 0)
+  var height = Math.ceil(Math.log2(data.hashes.length))
+  build(height, 0)
 
   return {
     flags: bits2bytes(bits),
     hashes: hashes,
     numTransactions: numTransactions,
-    merkleRoot: data.merkleRoot
+    merkleRoot: getHash(height, 0)
   }
 }
 
 /**
  * @param {partialMerkleTree} data
- * @return {BUffer[]}
+ * @return {Buffer[]}
  */
 module.exports.verify = function (data) {
   var hashes = []
