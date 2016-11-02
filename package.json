@@ -27,7 +27,7 @@
   "devDependencies": {
     "buffer-reverse": "^1.0.1",
     "faucet": "0.0.1",
-    "nyc": "^6.4.4",
+    "nyc": "^8.4.0",
     "standard": "^7.0.0",
     "tape": "^4.5.1",
     "zuul": "^3.10.1",
